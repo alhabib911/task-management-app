@@ -1,0 +1,63 @@
+.login-container{
+    display: flex;
+    margin-top: 60px;
+}
+.login-logo-area{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-logo-area img{
+    width: 230px;
+}
+.login-form{
+    width: 50%;
+}
+.create-account-link{
+    text-align: center;
+    margin-top: 10px;
+    color: #0F75BC;
+}
+.create-account-link:hover{
+    text-align: center;
+    margin-top: 10px;
+    color: #F7941E;
+}
+.login-btn{
+    border: 1px solid gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #0F75BC;
+    color: #fff;
+    cursor: pointer;
+}
+.login-btn:hover{
+    border: 1px solid gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F7941E;
+    color: #fff;
+    cursor: pointer;
+}
+.g-button{
+    display: flex;
+    border: 1px solid gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+    color: #383838;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.g-button:hover{
+    border: 1px solid gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #0F75BC;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}

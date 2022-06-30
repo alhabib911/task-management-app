@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, Link } from "react-router-dom";
+import Login from './Authentication/Login'
+import Task from './Page/Task';
+import Register from './Authentication/Register'
+import CompletedTasks from './Page/CompletedTasks';
+import ToDo from './Page/ToDo';
+import Calendar from './Page/Calendar';
+import RequereAuth from './Authentication/RequereAuth'
+import MyProfile from './Page/MyProfile';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Routes>
+        {/* <Route path='/task' element={<Task></Task>}></Route> */}
+        {/* <Route path='completed-tasks' element={<CompletedTasks></CompletedTasks>}></Route>
+        <Route path='/todo' element={<ToDo></ToDo>}></Route>
+        <Route path='/Calendar' element={<Calendar></Calendar>}></Route> */}
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
+
+        <Route path='/task' element={<RequereAuth>
+          <Task></Task>
+        </RequereAuth>}>
+        <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='completed-tasks' element={<CompletedTasks></CompletedTasks>}></Route>
+          <Route path='todo' element={<ToDo></ToDo>}></Route>
+          <Route path='calendar' element={<Calendar></Calendar>}></Route>
+    
+        </Route>
+      </Routes>
     </div>
   );
 }

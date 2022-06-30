@@ -1,0 +1,23 @@
+.register-container{
+    display: flex;
+    margin-top: 60px;
+}
+.register-container-area{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register-container-area img{
+    width: 230px;
+}
+.register-form{
+    width: 50%;
+}
+.login-link{
+    text-align: center;
+    margin-top: 10px;
+}
+.login-link a{
+    color: #0F75BC;
+}
