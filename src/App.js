@@ -8,6 +8,7 @@ import ToDo from './Page/ToDo';
 import Calendar from './Page/Calendar';
 import RequereAuth from './Authentication/RequereAuth'
 import MyProfile from './Page/MyProfile';
+import ToDoEdit from './Page/ToDoEdit';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='completed-tasks' element={<CompletedTasks></CompletedTasks>}></Route>
           <Route path='todo' element={<ToDo></ToDo>}></Route>
+          <Route path='todo/:id' element={<ToDoEdit></ToDoEdit>}></Route>
           <Route path='calendar' element={<Calendar></Calendar>}></Route>
     
         </Route>

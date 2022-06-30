@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-
-
-
 import { FcGoogle } from 'react-icons/fc';
 import auth from '../Fairbase.init';
 import Loading from '../Share/Loading';

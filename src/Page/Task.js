@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../Fairbase.init';
 import Navbar from '../Share/Navbar';
 import { Link, Outlet } from 'react-router-dom';
+import Modal from './Modal'
+import { AiFillPlusCircle } from 'react-icons/ai';
+import './Task.css'
 
 
 const Task = () => {
+    const [modalOpen, setModalOpen] = useState(false);
     const [user] = useAuthState(auth)
     return (
         <div>
@@ -23,12 +27,29 @@ const Task = () => {
                 <div class="drawer-side">
                     <label for="my-drawer-2" class="drawer-overlay"></label>
                     <ul class="menu p-4 overflow-y-auto w-56 bg-base-200 text-base-content">
-                        
                         {
-                            user && <li><Link to='/task/completed-tasks'>Completed Tasks</Link></li>
+                            user && <button
+                                className="openModalBtn"
+                                onClick={() => {
+                                    setModalOpen(true);
+                                }}
+                            >
+                                <div className='add-my-task-icon'>
+                                    <div className='my-task-icon'>
+                                        <AiFillPlusCircle />
+                                    </div>
+                                    <div>
+                                        <li className='mt-10'> Add My Task</li>
+                                    </div>
+                                </div>
+                            </button>
+
                         }
                         {
-                            user && <li><Link to='/task/todo'>To Do</Link></li>
+                            user && <li><Link to='/task/todo'>Todo</Link></li>
+                        }
+                        {
+                            user && <li><Link to='/task/completed-tasks'>Completed Tasks</Link></li>
                         }
                         {
                             user && <li><Link to='/task/calendar'>Calender</Link></li>
@@ -36,6 +57,7 @@ const Task = () => {
                     </ul>
 
                 </div>
+                {modalOpen && <Modal setOpenModal={setModalOpen} />}
             </div>
         </div>
     );

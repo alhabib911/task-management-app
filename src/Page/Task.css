@@ -1,0 +1,12 @@
+.add-my-task-icon{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.my-task-icon{
+    padding: 38px 6px 0px 15px;
+}
+.add-my-task-icon:hover{
+    color: #1c7ba0;
+    font-weight: 600;
+}

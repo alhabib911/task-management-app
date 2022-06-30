@@ -1,0 +1,10 @@
+.radio-field{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: 20px;   
+}
