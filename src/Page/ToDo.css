@@ -1,0 +1,9 @@
+.todo-container{
+    display: flex;
+}
+.task-area{
+    width: 50%;
+}
+.new-task-create-area{
+    width: 50%;
+}

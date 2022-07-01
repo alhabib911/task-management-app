@@ -5,12 +5,16 @@ import { ToastContainer, toast } from 'react-toastify';
 import './TodoEditModal.css'
 import { DayPicker, useInput } from 'react-day-picker';
 import useUpdateTask from '../hook/useUpdateTask';
+import { MdDelete } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
 
 const ToDoEdit = () => {
+    const navigate = useNavigate()
     const { id } = useParams()
     const [task] = useTask()
     const singleTask = task.find((task) => task._id == id)
+    const {_id} = singleTask
     console.log(singleTask);
     const handelTaskUpdate = event => {
         event.preventDefault()
@@ -50,10 +54,39 @@ const ToDoEdit = () => {
 
     const [updateTask] = useUpdateTask()
     console.log(updateTask);
+
+    const handleTaskDelete = id => {
+        const proceed = window.confirm('Do you want to delete this task?')
+        if (proceed) {
+            console.log('delete', id);
+            const url = `http://localhost:5000/task/${id}`
+            fetch(url, {
+                method: "DELETE"
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        console.log('deleted');
+                    }
+                })
+                .then(() => {
+                    window.location.reload();
+                    toast('Task Deleted');
+
+                })
+        }
+        navigate('/task/todo')
+    }
+
+
+
     return (
         <div className='update-task-container'>
             <div className='task-details'>
                 <div className="task-details-area">
+                    <div className='delete-btn'><span>
+                        <button onClick={() => handleTaskDelete(_id)}><MdDelete /></button>
+                    </span></div>
                     Task Pick Date: {singleTask?.date || updateTask?.date} <br />
                     Task: {singleTask?.task || updateTask?.task} <br />
                     Task Title: {singleTask?.title || updateTask?.title} <br />

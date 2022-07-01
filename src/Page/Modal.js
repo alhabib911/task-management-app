@@ -47,7 +47,7 @@ function Modal({ setOpenModal }) {
           <h1>Add a task</h1>
         </div>
         <form onSubmit={handelAddTask} className="modal-form">
-          <input type="text" name="task" placeholder="New Task"/> 
+          <input type="text" name="task" placeholder="New Task" required/> 
           <input className="modal-submit-btn" type="submit" value="Save" />
         </form>
         

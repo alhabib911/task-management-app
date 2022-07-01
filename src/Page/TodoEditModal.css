@@ -95,3 +95,15 @@
   border-radius: 10px;
   box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
+.delete-btn{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25px;
+}
+.delete-btn span:hover{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25px;
+  color: red;
+  cursor: pointer;
+}
