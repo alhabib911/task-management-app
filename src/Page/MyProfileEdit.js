@@ -63,7 +63,7 @@ const MyProfileEdit = () => {
                                 <label htmlFor="name">Name</label> <CgProfile />
                             </div>
                             <div className="in">
-                                <input defaultValue={user?.displayName || updateUser?.name} type="text" name="name" id="" />
+                                <input defaultValue={updateUser?.name || user?.displayName } type="text" name="name" id="" />
                             </div>
                         </div>
                         <div className='la-in'>
