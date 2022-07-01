@@ -1,12 +1,8 @@
 .radio-field{
     display: flex;
     justify-content: space-between;
-    width: 65%;
-    border: 1px solid gainsboro;
-    border-radius: 10px;
-    padding: 8px;
-    margin-top: 10px;
-    margin-left: 20px;   
+    width: 75%;
+    margin: 10px 0 0 55px;
 }
 .add-my-task-edit-icon{
     color: green;

@@ -1,0 +1,27 @@
+.calender-container-area {
+    display: flex;
+}
+
+/* 376px to Max- 425px Mobile View */
+@media only screen and (max-width: 425px) {
+    .calender-container-area {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* 426px to Max- 768px Mobile View */
+@media only screen and (min-width:426px) and (max-width:768px) {
+    .calender-container-area {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* 769px to Max- 992px Tablet View */
+@media only screen and (min-width:769px) and (max-width:992px) {
+    .calender-container-area {
+        display: flex;
+        flex-direction: column;
+    }
+}

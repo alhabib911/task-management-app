@@ -6,7 +6,7 @@ import { Link, Outlet } from 'react-router-dom';
 import Modal from './Modal'
 import { AiFillPlusCircle } from 'react-icons/ai';
 import './Task.css'
-
+import Footer from '../Share/Footer'
 
 const Task = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -59,6 +59,7 @@ const Task = () => {
                 </div>
                 {modalOpen && <Modal setOpenModal={setModalOpen} />}
             </div>
+            <Footer></Footer>
         </div>
     );
 };

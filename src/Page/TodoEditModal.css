@@ -107,3 +107,45 @@
   color: red;
   cursor: pointer;
 }
+/* 376px to Max- 425px Mobile View */
+@media only screen and (max-width: 425px) {
+  .update-task-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 10%;
+    gap: 10px;
+}
+.task-details{
+  width: 100%;
+}
+.todo-edit-modal-form {
+  width: 94%;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  padding: 25px;
+}
+}
+/* 426px to Max- 768px Mobile View */
+@media only screen and (min-width:426px) and (max-width:768px) {
+  .update-task-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 10%;
+    gap: 10px;
+}
+.task-details{
+  width: 100%;
+}
+.todo-edit-modal-form {
+  width: 94%;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  padding: 25px;
+}
+}
+/* 769px to Max- 992px Tablet View */
+@media only screen and (min-width:769px) and (max-width:992px) {
+    
+}

@@ -4,13 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import { MdDelete } from 'react-icons/md';
 import { TiEdit } from 'react-icons/ti';
 import { ToastContainer, toast } from 'react-toastify';
+import { useParams } from 'react-router-dom';
 
 
 const NewTask = (props) => {
-    const { _id, task } = props.task
-    const [modalOpen, setModalOpen] = useState(false);
+    const { _id, taskValue, role } = props.task
+    // const [modalOpen, setModalOpen] = useState(false);
     const navigate = useNavigate()
-    const handleAddProduct = (id) => {
+    const handleEditTask = (id) => {
         navigate(`/task/todo/${id}`)
     }
 
@@ -37,25 +38,58 @@ const NewTask = (props) => {
         }
         navigate('/task/todo')
     }
+
+    const makeComplete = id => {
+        const proceed = window.confirm('Are you complete this task?')
+        if (proceed) {
+
+            fetch(`http://localhost:5000/task/complete/${id}`, {
+                method: 'PUT',
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    window.location.reload();
+                    toast.success("That's great finish your task")
+                })
+        }
+        navigate('/task/completed-tasks')
+    }
+
+
+
     return (
         <div>
-            <div>
-                <label className='radio-field'>
-                    <div className="div">
-                        <input type="radio" name="radio" id="" value={task} />
-                        <span className='ml-3'>{task}</span>
-                    </div>
-                    <div className='edit-delete-icon'>
-                        <div className='add-my-task-edit-icon'>
-                            <button onClick={() => handleAddProduct(_id)} type="submit"><TiEdit /></button>
-                        </div>
-                        <div className='add-my-task-delete-icon'>
-                            <button onClick={() => handleTaskDelete(_id)}><MdDelete /></button>
-                        </div>
-                    </div>
 
-                </label>
-            </div>
+            {role !== 'completed' &&
+                <div>
+                    <label className='radio-field '>
+                        <div className="radio-button">
+
+                            <div>
+                                {role !== 'completed' && <button onClick={() => makeComplete(_id)}><input type="radio" name="radio" id="" value={taskValue} />
+                                    <span className='ml-3'>{taskValue}</span>
+                                </button>}
+                            </div>
+
+                        </div>
+                        <div className='edit-delete-icon'>
+                            <div className='add-my-task-edit-icon'>
+                                {role !== 'completed' && <button onClick={() => handleEditTask(_id)} type="submit"><TiEdit /></button>}
+
+
+
+                            </div>
+                            <div className='add-my-task-delete-icon'>
+                                {role !== 'completed' && <button onClick={() => handleTaskDelete(_id)}><MdDelete /></button>}
+
+                            </div>
+                        </div>
+
+                    </label>
+                </div>}
             <ToastContainer />
 
         </div>

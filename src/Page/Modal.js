@@ -8,10 +8,10 @@ function Modal({ setOpenModal }) {
     const [taskDetails, setTaskDetails] = useState([])
     const handelAddTask = event => {
         event.preventDefault()
-        const task = event.target.task.value
+        const taskValue = event.target.taskValue.value
        
 
-        const taskDetails = { task}
+        const taskDetails = { taskValue}
         setTaskDetails(taskDetails)
 
 
@@ -47,7 +47,7 @@ function Modal({ setOpenModal }) {
           <h1>Add a task</h1>
         </div>
         <form onSubmit={handelAddTask} className="modal-form">
-          <input type="text" name="task" placeholder="New Task" required/> 
+          <input type="text" name="taskValue" placeholder="New Task" required/> 
           <input className="modal-submit-btn" type="submit" value="Save" />
         </form>
         

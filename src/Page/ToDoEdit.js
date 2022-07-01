@@ -62,7 +62,7 @@ const ToDoEdit = () => {
                 <div className="task-details-area">
                     
                     Task Pick Date: {singleTask?.date || updateTask?.date} <br />
-                    Task: {singleTask?.task || updateTask?.task} <br />
+                    Task: {singleTask?.taskValue || updateTask?.taskValue} <br />
                     Task Title: {singleTask?.title || updateTask?.title} <br />
                     Task Details: {singleTask?.details || updateTask?.details}
                 </div>

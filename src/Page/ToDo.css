@@ -1,10 +1,78 @@
 .todo-container{
+    width: 100%;
     display: flex;
     margin-top: 50px;
 }
 .task-area{
-    width: 50%;
+    width: 40%;
+    background-color: #C8DAEA;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
 }
 .new-task-create-area{
-    width: 50%;
+    width: 25%;
+}
+.category-note-details{
+    width: 100%;
+    margin-right: 20px;
+    /* background-color: #C8DAEA; */
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+}
+.category-note-details-ui{
+    background-color: #C8DAEA;
+    padding: 10px;
+
+}
+.my-task-catagory{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 500;
+    align-items: flex-start;
+}
+
+/* 376px to Max- 425px Mobile View */
+@media only screen and (max-width: 425px) {
+    .todo-container{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }
+    .task-area {
+        width: 130%;
+    }
+    .new-task-create-area {
+        width: 100%;
+    }
+}
+/* 426px to Max- 768px Mobile View */
+@media only screen and (min-width:426px) and (max-width:768px) {
+    .todo-container {
+        width: 100%;
+        display: flex;
+        margin-top: 50px;
+        flex-direction: column;
+    }
+    .task-area {
+        display: flex;
+        width: 56%;
+        background-color: #C8DAEA;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+        flex-direction: column;
+        margin-left: 20%;
+    }
+    .new-task-create-area {
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+/* 769px to Max- 992px Tablet View */
+@media only screen and (min-width:769px) and (max-width:992px) {
+    
 }

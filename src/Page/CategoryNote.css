@@ -1,0 +1,7 @@
+.three-dot{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #C8DAEA;
+    padding-top: 10px;
+    margin-top: 10px;
+}

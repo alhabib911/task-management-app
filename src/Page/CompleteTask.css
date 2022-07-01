@@ -1,0 +1,34 @@
+.complete-container-area{
+    background-color: #c8daea;
+}
+.uncomplete-trash{
+    display: flex;
+    justify-content: space-around;
+}
+.not-complete{
+    color: #18202b;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.trash{
+    color: red;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.complete-task-value-area{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.view-details-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.complete-container-area small{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}

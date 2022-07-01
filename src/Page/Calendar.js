@@ -3,7 +3,7 @@ import { DayPicker, useInput } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 import useTask from '../hook/useTask';
 import TodoEditModal from './TodoEditModal';
-
+import './Calender.css'
 
 
 const Calendar = () => {
@@ -19,7 +19,7 @@ const Calendar = () => {
 
 
     return (
-        <div className='flex justify-around mt-12'>
+        <div className='calender-container-area flex justify-around mt-12'>
             <div>
                 <DayPicker {...dayPickerProps} footer={Calendar} />;
             </div>
@@ -38,7 +38,7 @@ const Calendar = () => {
             <tbody>
               {
                 task.map(task => <tr>
-                  <td>{task.task}</td>
+                  <td>{task.taskValue}</td>
                   <td>{task.date}</td>
                   <td>{task.title}</td>
                   <td>{task.details}</td>
@@ -48,13 +48,6 @@ const Calendar = () => {
             </tbody>
           </table>
         </div>
-
-
-                {/* {
-                    task.map(task => <TodoEditModal
-                        task={task}
-                    ></TodoEditModal>)
-                } */}
             </div>
         </div>
     );

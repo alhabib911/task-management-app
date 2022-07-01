@@ -15,7 +15,7 @@ const Navbar = () => {
     }
     return (
         <div className='navbar-container'>
-            <div class="navbar-area navbar bg-base-300">
+            <div class="navbar-area navbar bg-base-500">
                 <div class="navbar-start">
                     <BsClipboardCheck/>
                     <Link className='text-xl pl-2' to='/task'>Task Board</Link>
