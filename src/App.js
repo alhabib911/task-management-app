@@ -23,7 +23,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
 
-        <Route path='/task' element={<RequereAuth>
+        <Route path='/' element={<RequereAuth>
           <Task></Task>
         </RequereAuth>}>
         <Route index element={<MyProfile></MyProfile>}></Route>

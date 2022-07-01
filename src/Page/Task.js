@@ -46,13 +46,13 @@ const Task = () => {
 
                         }
                         {
-                            user && <li><Link to='/task/todo'>Todo</Link></li>
+                            user && <li><Link to='/todo'>Todo</Link></li>
                         }
                         {
-                            user && <li><Link to='/task/completed-tasks'>Completed Tasks</Link></li>
+                            user && <li><Link to='/completed-tasks'>Completed Tasks</Link></li>
                         }
                         {
-                            user && <li><Link to='/task/calendar'>Calender</Link></li>
+                            user && <li><Link to='/calendar'>Calender</Link></li>
                         }
                     </ul>
 
