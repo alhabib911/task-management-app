@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const useTask = () => {
     
-    const [taks, setTask] = useState([])
+    const [task, setTask] = useState([])
     useEffect(()=>{
         fetch('http://localhost:5000/task',{
             method: 'GET',
@@ -15,7 +15,7 @@ const useTask = () => {
         .then (data=>setTask(data))
     },[])
     
-    return [taks, setTask]
+    return [task, setTask]
 };
 
 export default useTask;

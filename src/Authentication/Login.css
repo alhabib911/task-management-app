@@ -22,7 +22,7 @@
 .create-account-link:hover{
     text-align: center;
     margin-top: 10px;
-    color: #F7941E;
+    color: #606060;
 }
 .login-btn{
     border: 1px solid gainsboro;
@@ -36,7 +36,7 @@
     border: 1px solid gainsboro;
     padding: 10px;
     border-radius: 10px;
-    background-color: #F7941E;
+    background-color: #606060;
     color: #fff;
     cursor: pointer;
 }

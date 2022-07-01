@@ -3,9 +3,10 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
-import auth from '../Fairbase.init';
+import auth from '../Firebase.init';
 import Loading from '../Share/Loading';
 import useToken from '../hook/useToken';
+import './Login.css'
 
 const Login = () => {
     const [email, SetEmail] = useState('')

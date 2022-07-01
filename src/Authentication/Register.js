@@ -1,11 +1,12 @@
 import React from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
-import auth from '../Fairbase.init';
+import auth from '../Firebase.init';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Loading from '../Share/Loading';
 import useToken from '../hook/useToken';
+import './Register.css'
 
 const Register = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);

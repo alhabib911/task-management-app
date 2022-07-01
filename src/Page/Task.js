@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../Fairbase.init';
+import auth from '../Firebase.init';
 import Navbar from '../Share/Navbar';
 import { Link, Outlet } from 'react-router-dom';
 import Modal from './Modal'

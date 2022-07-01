@@ -1,6 +1,6 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Navigate, useLocation } from "react-router-dom";
-import auth from "../Fairbase.init";
+import auth from "../Firebase.init";
 import Loading from "../Share/Loading";
 
 
