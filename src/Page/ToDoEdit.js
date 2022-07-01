@@ -23,10 +23,10 @@ const ToDoEdit = () => {
         // const time = event.target.time.value
 
         const updateTask = { title, details, date }
+console.log(updateTask);
 
 
-
-        const url = `https://true-beaver-14261.herokuapp.com/task/${id}`
+        const url = `https://true-beaver-14261.herokuapp.com/tasks/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -61,10 +61,10 @@ const ToDoEdit = () => {
             <div className='task-details'>
                 <div className="task-details-area">
                     
-                    Task Pick Date: {singleTask?.date || updateTask?.date} <br />
-                    Task: {singleTask?.taskValue || updateTask?.taskValue} <br />
-                    Task Title: {singleTask?.title || updateTask?.title} <br />
-                    Task Details: {singleTask?.details || updateTask?.details}
+                    Task Pick Date: { updateTask?.date} <br />
+                    Task: {updateTask?.taskValue} <br />
+                    Task Title: { updateTask?.title} <br />
+                    Task Details: { updateTask?.details}
                 </div>
             </div>
             <form onSubmit={handelTaskUpdate} className="todo-edit-modal-form">
