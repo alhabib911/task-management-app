@@ -63,7 +63,7 @@ const MyProfileEdit = () => {
                                 <label htmlFor="name">Name</label> <CgProfile />
                             </div>
                             <div className="in">
-                                <input defaultValue={updateUser?.name  } type="text" name="name" id="" />
+                                <input defaultValue={updateUser?.name  } type="text" name="name" id="" required/>
                             </div>
                         </div>
                         <div className='la-in'>
@@ -75,7 +75,7 @@ const MyProfileEdit = () => {
                                 </div>
                             </div>
                             <div className="in">
-                                <input defaultValue={user?.phoneNumber || updateUser?.phone} type="number" name="phone" id="" />
+                                <input defaultValue={user?.phoneNumber || updateUser?.phone} type="number" name="phone" id="" re />
                             </div>
                         </div>
                         <div className='la-in'>

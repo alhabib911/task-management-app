@@ -70,15 +70,15 @@ console.log(updateTask);
             <form onSubmit={handelTaskUpdate} className="todo-edit-modal-form">
                 <div className='input-daypicker'>
                     <div>
-                        <input type="text" name="title" id="" placeholder='Title' />
-                        <textarea name="details" id="" maxlength="45" placeholder='Add Details'></textarea>
+                        <input type="text" name="title" id="" placeholder='Title' required/>
+                        <textarea name="details" id="" maxlength="45" placeholder='Add Details' required></textarea>
                     </div>
                     <div className='day-picker'>
                         <label>
                             <input
                                 name='date'
                                 {...inputProps}
-                                className="input-reset pa2 ma2 bg-white black ba"
+                                className="input-reset pa2 ma2 bg-white black ba" required
                             />
                         </label>
 
