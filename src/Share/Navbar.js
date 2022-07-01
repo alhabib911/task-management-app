@@ -18,7 +18,7 @@ const Navbar = () => {
             <div class="navbar-area navbar bg-base-500">
                 <div class="navbar-start">
                     <BsClipboardCheck/>
-                    <Link className='text-xl pl-2' to='/task'>Task Board</Link>
+                    <Link className='text-xl pl-2' to='/'>Task Board</Link>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <p className='font-semibold text-emerald-900 text-2xl'>Task Management App</p>
@@ -34,8 +34,8 @@ const Navbar = () => {
                                     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                                 </label>
                                 <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><Link to='/task/profile'>My Account</Link></li>
-                                    <li><Link to='/task/profile-edit'>Manage Account</Link></li>
+                                    <li><Link to='/profile'>My Account</Link></li>
+                                    <li><Link to='/profile-edit'>Manage Account</Link></li>
                                     <li>
                                         {
                                             user ?

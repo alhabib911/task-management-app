@@ -27,7 +27,7 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     if (token) {
-        navigate('/task');
+        navigate('/');
     }
 
     if (loading || gLoading) {

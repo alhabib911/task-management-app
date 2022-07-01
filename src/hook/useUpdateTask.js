@@ -7,7 +7,7 @@ const useUpdateTask = () => {
 
     const [updateTask, setUpdateTask] = useState({})
     useEffect(()=>{
-        fetch(`https://bearded-loon-96578.herokuapp.com/task/${id}`,{
+        fetch(`https://true-beaver-14261.herokuapp.com/task/${id}`,{
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

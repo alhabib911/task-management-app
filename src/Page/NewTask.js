@@ -12,7 +12,7 @@ const NewTask = (props) => {
     // const [modalOpen, setModalOpen] = useState(false);
     const navigate = useNavigate()
     const handleEditTask = (id) => {
-        navigate(`/task/todo/${id}`)
+        navigate(`/todo/${id}`)
     }
 
 
@@ -20,7 +20,7 @@ const NewTask = (props) => {
         const proceed = window.confirm('Do you want to delete this task?')
         if (proceed) {
             console.log('delete', id);
-            const url = `https://bearded-loon-96578.herokuapp.com/task/${id}`
+            const url = `https://true-beaver-14261.herokuapp.com/task/${id}`
             fetch(url, {
                 method: "DELETE"
             })
@@ -36,14 +36,14 @@ const NewTask = (props) => {
 
                 })
         }
-        navigate('/task/todo')
+        navigate('/todo')
     }
 
     const makeComplete = id => {
         const proceed = window.confirm('Are you complete this task?')
         if (proceed) {
 
-            fetch(`https://bearded-loon-96578.herokuapp.com/task/complete/${id}`, {
+            fetch(`https://true-beaver-14261.herokuapp.com/task/complete/${id}`, {
                 method: 'PUT',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -55,7 +55,7 @@ const NewTask = (props) => {
                     toast.success("That's great finish your task")
                 })
         }
-        navigate('/task/completed-tasks')
+        navigate('/completed-tasks')
     }
 
 

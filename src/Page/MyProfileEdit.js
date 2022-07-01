@@ -30,7 +30,7 @@ const MyProfileEdit = () => {
 
 
 
-        const url = `https://bearded-loon-96578.herokuapp.com/user/${email}`
+        const url = `https://true-beaver-14261.herokuapp.com/user/${email}`
         fetch(url, {
             method: 'PUT',
             headers: {

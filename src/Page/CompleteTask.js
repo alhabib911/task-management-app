@@ -12,7 +12,7 @@ const CompleteTask = ({ task }) => {
         const proceed = window.confirm('Do you want to make Not Complete Task?')
         if (proceed) {
 
-            fetch(`https://bearded-loon-96578.herokuapp.com/task/${id}`, {
+            fetch(`https://true-beaver-14261.herokuapp.com/task/${id}`, {
                 method: 'PUT',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -31,7 +31,7 @@ const CompleteTask = ({ task }) => {
         const proceed = window.confirm('Do you want to delete this task?')
         if (proceed) {
             console.log('delete', id);
-            const url = `https://bearded-loon-96578.herokuapp.com/task/complete/${id}`
+            const url = `https://true-beaver-14261.herokuapp.com/task/complete/${id}`
             fetch(url, {
                 method: "DELETE"
             })

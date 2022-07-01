@@ -5,7 +5,7 @@ const useTaskCategory = () => {
     
     const [taskCategory, setTaskCategory] = useState([])
     useEffect(()=>{
-        fetch('https://bearded-loon-96578.herokuapp.com/categorydetails',{
+        fetch('https://true-beaver-14261.herokuapp.com/categorydetails',{
             method: 'GET',
             headers: {
                 'content-type': 'application/json',

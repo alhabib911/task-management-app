@@ -24,7 +24,7 @@ const TaskCategorys = (props) => {
 
 
 
-        fetch('https://bearded-loon-96578.herokuapp.com/categorynotedetails', {
+        fetch('https://true-beaver-14261.herokuapp.com/categorynotedetails', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ const TaskCategorys = (props) => {
         const proceed = window.confirm('Do you want to delete this Category?')
         if (proceed) {
             console.log('delete', id);
-            const url = `https://bearded-loon-96578.herokuapp.com/categorydetails/${id}`
+            const url = `https://true-beaver-14261.herokuapp.com/categorydetails/${id}`
             fetch(url, {
                 method: "DELETE"
             })
@@ -79,7 +79,7 @@ const TaskCategorys = (props) => {
                 <ul tabindex="0" class="category-task-input dropdown-content menu   bg-base-200 rounded-box w-72">
                     
                     <form onSubmit={handleCategoryNote}>
-                        <input className='w-full my-2' type="text" name="categoryName" id="" placeholder='Category Name' required /> <br />
+                        <input className='w-full my-2' value={taskCategory} type="text" name="categoryName" id="" placeholder='Category Name' required /> <br />
                         <input className='w-full my-2' type="date" name="date" id="" /> <br />
                         <input className='w-full mb-2' type="text" name="title" id="" placeholder='Title' /> <br />
                         <input className='w-full mb-2' type="text" name="tagline" id="" placeholder='Tagline' /> <br />

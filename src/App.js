@@ -26,7 +26,7 @@ function App() {
         <Route path='/' element={<RequereAuth>
           <Task></Task>
         </RequereAuth>}>
-        <Route index element={<MyProfile></MyProfile>}></Route>
+        <Route index element={<ToDo></ToDo>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='profile-edit' element={<MyProfileEdit></MyProfileEdit>}></Route>
           <Route path='completed-tasks' element={<CompletedTasks></CompletedTasks>}></Route>

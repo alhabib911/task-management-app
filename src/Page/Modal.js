@@ -16,7 +16,7 @@ function Modal({ setOpenModal }) {
 
 
 
-        fetch('https://bearded-loon-96578.herokuapp.com/task', {
+        fetch('https://true-beaver-14261.herokuapp.com/task', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

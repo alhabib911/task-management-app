@@ -35,7 +35,7 @@ const Register = () => {
     }
 
     if (token) {
-        navigate('/task');
+        navigate('/');
     }
 
     const onSubmit = async data => {
