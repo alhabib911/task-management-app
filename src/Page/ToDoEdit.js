@@ -26,7 +26,7 @@ const ToDoEdit = () => {
 
 
 
-        const url = `http://localhost:5000/task/${id}`
+        const url = `https://bearded-loon-96578.herokuapp.com/task/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {

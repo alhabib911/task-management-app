@@ -5,7 +5,7 @@ const useCategoryNote = () => {
     
     const [categoryNote, setCategoryNote] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/categorynotedetails',{
+        fetch('https://bearded-loon-96578.herokuapp.com/categorynotedetails',{
             method: 'GET',
             headers: {
                 'content-type': 'application/json',

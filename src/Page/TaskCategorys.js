@@ -24,7 +24,7 @@ const TaskCategorys = (props) => {
 
 
 
-        fetch('http://localhost:5000/categorynotedetails', {
+        fetch('https://bearded-loon-96578.herokuapp.com/categorynotedetails', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ const TaskCategorys = (props) => {
         const proceed = window.confirm('Do you want to delete this Category?')
         if (proceed) {
             console.log('delete', id);
-            const url = `http://localhost:5000/categorydetails/${id}`
+            const url = `https://bearded-loon-96578.herokuapp.com/categorydetails/${id}`
             fetch(url, {
                 method: "DELETE"
             })

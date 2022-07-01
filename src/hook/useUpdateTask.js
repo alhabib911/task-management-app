@@ -7,7 +7,7 @@ const useUpdateTask = () => {
 
     const [updateTask, setUpdateTask] = useState({})
     useEffect(()=>{
-        fetch(`http://localhost:5000/task/${id}`,{
+        fetch(`https://bearded-loon-96578.herokuapp.com/task/${id}`,{
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

@@ -16,7 +16,7 @@ function Modal({ setOpenModal }) {
 
 
 
-        fetch('http://localhost:5000/task', {
+        fetch('https://bearded-loon-96578.herokuapp.com/task', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

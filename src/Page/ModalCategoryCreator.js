@@ -14,7 +14,7 @@ const ModalCategoryCreator = ({ setOpenModal }) => {
 
 
 
-        fetch('http://localhost:5000/categorydetails', {
+        fetch('https://bearded-loon-96578.herokuapp.com/categorydetails', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

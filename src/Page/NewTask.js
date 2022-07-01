@@ -20,7 +20,7 @@ const NewTask = (props) => {
         const proceed = window.confirm('Do you want to delete this task?')
         if (proceed) {
             console.log('delete', id);
-            const url = `http://localhost:5000/task/${id}`
+            const url = `https://bearded-loon-96578.herokuapp.com/task/${id}`
             fetch(url, {
                 method: "DELETE"
             })
@@ -43,7 +43,7 @@ const NewTask = (props) => {
         const proceed = window.confirm('Are you complete this task?')
         if (proceed) {
 
-            fetch(`http://localhost:5000/task/complete/${id}`, {
+            fetch(`https://bearded-loon-96578.herokuapp.com/task/complete/${id}`, {
                 method: 'PUT',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`

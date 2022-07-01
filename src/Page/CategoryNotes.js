@@ -14,7 +14,7 @@ const CategoryNotes = (props) => {
         const proceed = window.confirm('Do you want to delete this Note?')
         if (proceed) {
             console.log('delete', id);
-            const url = `http://localhost:5000/categorynotedetails/${id}`
+            const url = `https://bearded-loon-96578.herokuapp.com/categorynotedetails/${id}`
             fetch(url, {
                 method: "DELETE"
             })
